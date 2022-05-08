@@ -2,6 +2,8 @@
 
 This is a POC of a React app using tensor-flow and an AI pretrained model.
 
+The model is not that good at playing tic tac toe on purpose, so you can win. ;)
+
 In 3d just for more pleasure.
 
 ![HomerSimpsonsTheSimpsonsGIF](https://user-images.githubusercontent.com/48759680/167318893-28b62522-89af-4c19-b11a-05093ec66903.gif)
