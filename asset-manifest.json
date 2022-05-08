@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/css/main.998f429a.css",
+    "main.js": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/main.6443d4b5.js",
+    "static/js/787.9f518cde.chunk.js": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js",
+    "index.html": "/pabrcno.github.io/tic-tac-toe-3d-tf/index.html",
+    "main.998f429a.css.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/css/main.998f429a.css.map",
+    "main.6443d4b5.js.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/main.6443d4b5.js.map",
+    "787.9f518cde.chunk.js.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.998f429a.css",
+    "static/js/main.6443d4b5.js"
+  ]
+}
