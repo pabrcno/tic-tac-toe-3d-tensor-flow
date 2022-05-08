@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/css/main.998f429a.css",
-    "main.js": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/main.6443d4b5.js",
-    "static/js/787.9f518cde.chunk.js": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js",
-    "index.html": "/pabrcno.github.io/tic-tac-toe-3d-tf/index.html",
-    "main.998f429a.css.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/css/main.998f429a.css.map",
-    "main.6443d4b5.js.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/main.6443d4b5.js.map",
-    "787.9f518cde.chunk.js.map": "/pabrcno.github.io/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js.map"
+    "main.css": "/tic-tac-toe-3d-tf/static/css/main.998f429a.css",
+    "main.js": "/tic-tac-toe-3d-tf/static/js/main.0162d63d.js",
+    "static/js/787.9f518cde.chunk.js": "/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js",
+    "index.html": "/tic-tac-toe-3d-tf/index.html",
+    "main.998f429a.css.map": "/tic-tac-toe-3d-tf/static/css/main.998f429a.css.map",
+    "main.0162d63d.js.map": "/tic-tac-toe-3d-tf/static/js/main.0162d63d.js.map",
+    "787.9f518cde.chunk.js.map": "/tic-tac-toe-3d-tf/static/js/787.9f518cde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.998f429a.css",
-    "static/js/main.6443d4b5.js"
+    "static/js/main.0162d63d.js"
   ]
 }
