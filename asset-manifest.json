@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tic-tac-toe-3d-tensor-flow/static/css/main.998f429a.css",
-    "main.js": "/tic-tac-toe-3d-tensor-flow/static/js/main.47bbe566.js",
+    "main.js": "/tic-tac-toe-3d-tensor-flow/static/js/main.e285f8d5.js",
     "static/js/787.9f518cde.chunk.js": "/tic-tac-toe-3d-tensor-flow/static/js/787.9f518cde.chunk.js",
     "index.html": "/tic-tac-toe-3d-tensor-flow/index.html",
     "main.998f429a.css.map": "/tic-tac-toe-3d-tensor-flow/static/css/main.998f429a.css.map",
-    "main.47bbe566.js.map": "/tic-tac-toe-3d-tensor-flow/static/js/main.47bbe566.js.map",
+    "main.e285f8d5.js.map": "/tic-tac-toe-3d-tensor-flow/static/js/main.e285f8d5.js.map",
     "787.9f518cde.chunk.js.map": "/tic-tac-toe-3d-tensor-flow/static/js/787.9f518cde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.998f429a.css",
-    "static/js/main.47bbe566.js"
+    "static/js/main.e285f8d5.js"
   ]
 }
