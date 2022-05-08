@@ -2,6 +2,7 @@
   "name": "tic-tac-toe-3d-tf",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pabrcno.github.io/tic-tac-toe-3d-tf",
   "dependencies": {
     "@react-three/drei": "^9.7.1",
     "@react-three/fiber": "^8.0.13",
@@ -15,6 +16,7 @@
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
     "@types/three": "^0.140.0",
+    "gh-pages": "^3.2.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.1",
@@ -27,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
