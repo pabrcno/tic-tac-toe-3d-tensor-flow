@@ -15,19 +15,24 @@ const aIPlay = async (
   const matches = tf.stack<tf.Tensor<tf.Rank.R1>>([tableTensor]);
   const result = model.predict(matches) as tf.Tensor<tf.Rank.R1>;
   // Log the results
-  console.log("max", result.max().dataSync());
 
-  const position = Array.from(result.reshape([3, 3]).argMax().dataSync());
-
-  console.log("position", position);
-  console.log(
-    "futurestate",
-    table.map((row, i) =>
-      row.map((col, j) => (i === position[1] && j === position[2] ? -1 : col))
-    )
-  );
-  return table.map((row, i) =>
-    row.map((col, j) => (i === position[1] && j === position[2] ? -1 : col))
+  const resultArray = (await result.reshape([3, 3]).array()) as Array<
+    Array<number>
+  >;
+  let max = 0;
+  resultArray.forEach((element) => {
+    max = Math.max(max, Math.max(...element));
+  });
+  let index: [number, number] = [0, 0];
+  resultArray.forEach((element, i) => {
+    element.forEach((e, j) => {
+      if (e === max) {
+        index = [i, j];
+      }
+    });
+  });
+  return table.map((element, i) =>
+    element.map((e, j) => (i === index[0] && j === index[1] ? -1 : e))
   );
 };
 export default aIPlay;
