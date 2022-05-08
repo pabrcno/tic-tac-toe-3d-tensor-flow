@@ -1,6 +1,6 @@
 import * as tf from "@tensorflow/tfjs";
 const aIPlay = async (
-  table: Array<Array<-1 | 0 | 1>>
+  board: Array<Array<-1 | 0 | 1>>
 ): Promise<Array<Array<-1 | 0 | 1>>> => {
   await tf.ready();
 
@@ -9,10 +9,10 @@ const aIPlay = async (
   const model = await tf.loadLayersModel(modelPath);
 
   // Three board states
-  const tableTensor = tf.tensor<tf.Rank.R1>(table.flat());
-  console.log("paststate", table);
+  const boardTensor = tf.tensor<tf.Rank.R1>(board.flat());
+  console.log("paststate", board);
   // Stack states into a shape [3, 9]
-  const matches = tf.stack<tf.Tensor<tf.Rank.R1>>([tableTensor]);
+  const matches = tf.stack<tf.Tensor<tf.Rank.R1>>([boardTensor]);
   const result = model.predict(matches) as tf.Tensor<tf.Rank.R1>;
   // Log the results
 
@@ -31,8 +31,10 @@ const aIPlay = async (
       }
     });
   });
-  return table.map((element, i) =>
-    element.map((e, j) => (i === index[0] && j === index[1] ? -1 : e))
+  return board.map((element, i) =>
+    element.map((e, j) =>
+      i === index[0] && j === index[1] && e !== 1 ? -1 : e
+    )
   );
 };
 export default aIPlay;

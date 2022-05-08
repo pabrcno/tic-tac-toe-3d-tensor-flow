@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { aIPlayThunk } from "./thunk";
 
-type tableState = {
-  table: Array<Array<-1 | 0 | 1>>;
+type boardState = {
+  board: Array<Array<-1 | 0 | 1>>;
   isIAPlay: boolean;
 };
 
-const initialState: tableState = {
-  table: [
+const initialState: boardState = {
+  board: [
     [0, 0, 0],
     [0, 0, 0],
     [0, 0, 0],
@@ -15,18 +15,18 @@ const initialState: tableState = {
   isIAPlay: false,
 };
 
-const tableSlice = createSlice({
-  name: "table",
+const boardSlice = createSlice({
+  name: "board",
   initialState,
   reducers: {
-    setTable: (state, action) => {
-      state.table = action.payload;
+    setboard: (state, action) => {
+      state.board = action.payload;
     },
     setCell(state, action) {
       if (!state.isIAPlay) {
         const { rowIndex, cellIndex } = action.payload;
-        state.table[rowIndex][cellIndex] =
-          state.table[rowIndex][cellIndex] === 0 ? 1 : 0;
+        state.board[rowIndex][cellIndex] =
+          state.board[rowIndex][cellIndex] === 0 ? 1 : 0;
       }
     },
     setIsIAPlay: (state, action) => {
@@ -35,12 +35,12 @@ const tableSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(aIPlayThunk.fulfilled, (state, action) => {
-      state.table = action.payload;
+      state.board = action.payload;
       state.isIAPlay = false;
     });
   },
 });
 
-export const { setTable, setIsIAPlay, setCell } = tableSlice.actions;
+export const { setboard, setIsIAPlay, setCell } = boardSlice.actions;
 
-export default tableSlice.reducer;
+export default boardSlice.reducer;

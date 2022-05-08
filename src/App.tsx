@@ -1,7 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useState } from "react";
-import "./App.css";
-import { useSelector } from "react-redux";
 import { RootState } from "./app/store";
 import {
   MeshReflectorMaterial,
@@ -11,9 +9,8 @@ import {
   Torus,
 } from "@react-three/drei";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import { setCell, setIsIAPlay } from "./app/tableSlice";
+import { setCell } from "./app/boardSlice";
 import { aIPlayThunk } from "./app/thunk";
-import { useEffect } from "react";
 
 type Props = {
   rowIndex: number;
@@ -127,12 +124,11 @@ const X = ({ rowIndex, cellIndex }: Props2) => {
 };
 
 function App() {
-  const { table } = useAppSelector((state: RootState) => state.table);
+  const { board } = useAppSelector((state: RootState) => state.board);
   const dispatch = useAppDispatch();
 
   const handleCellClick = (rowIndex: number, cellIndex: number) => {
     dispatch(setCell({ rowIndex, cellIndex }));
-
     dispatch(aIPlayThunk());
   };
 
@@ -148,30 +144,33 @@ function App() {
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
-        {table.map((row, rowIndex) =>
-          row.map((cell, cellIndex) =>
-            cell === -1 ? (
-              <O
-                key={`${rowIndex}-${cellIndex}`}
-                rowIndex={rowIndex}
-                cellIndex={cellIndex}
-              />
-            ) : cell === 1 ? (
-              <X
-                key={`${rowIndex}-${cellIndex}`}
-                rowIndex={rowIndex}
-                cellIndex={cellIndex}
-              />
-            ) : (
-              <Cell
-                key={`${rowIndex}-${cellIndex}`}
-                rowIndex={rowIndex}
-                cellIndex={cellIndex}
-                handleCellClick={handleCellClick}
-              />
+        <group>
+          {board.map((row, rowIndex) =>
+            row.map((cell, cellIndex) =>
+              cell === -1 ? (
+                <O
+                  key={`${rowIndex}-${cellIndex}`}
+                  rowIndex={rowIndex}
+                  cellIndex={cellIndex}
+                />
+              ) : cell === 1 ? (
+                <X
+                  key={`${rowIndex}-${cellIndex}`}
+                  rowIndex={rowIndex}
+                  cellIndex={cellIndex}
+                />
+              ) : (
+                <Cell
+                  key={`${rowIndex}-${cellIndex}`}
+                  rowIndex={rowIndex}
+                  cellIndex={cellIndex}
+                  handleCellClick={handleCellClick}
+                />
+              )
             )
-          )
-        )}
+          )}
+        </group>
+
         <OrbitControls />
         <Stars
           radius={100}

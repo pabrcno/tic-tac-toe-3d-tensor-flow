@@ -1,9 +1,9 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import tableReducer from "./tableSlice";
+import boardReducer from "./boardSlice";
 export const store = configureStore({
   reducer: {
-    table: tableReducer,
+    board: boardReducer,
   },
 });
 
