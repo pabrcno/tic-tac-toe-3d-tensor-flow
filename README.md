@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+#TTT 3d tensorflow
+
+This is a POC of a React app using tensor-flow and an AI pretrained model.
+In 3d just for more pleasure.
+![HomerSimpsonsTheSimpsonsGIF](https://user-images.githubusercontent.com/48759680/167318893-28b62522-89af-4c19-b11a-05093ec66903.gif)
+
+##<a href="https://pabrcno.github.io/tic-tac-toe-3d-tensor-flow/">Check it out</a>
+
+# Create React App && REACT_THREE_FIBER
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
