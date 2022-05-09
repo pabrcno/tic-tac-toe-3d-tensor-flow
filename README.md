@@ -1,4 +1,5 @@
 # TTT 3d tensorflow
+## <a href="https://pabrcno.github.io/tic-tac-toe-3d-tensor-flow/">Check it out</a>
 
 This is a POC of a React app using tensor-flow and an AI pretrained model.
 
@@ -8,7 +9,7 @@ In 3d just for more pleasure.
 
 ![HomerSimpsonsTheSimpsonsGIF](https://user-images.githubusercontent.com/48759680/167318893-28b62522-89af-4c19-b11a-05093ec66903.gif)
 
-## <a href="https://pabrcno.github.io/tic-tac-toe-3d-tensor-flow/">Check it out</a>
+
 
 # Create React App && REACT_THREE_FIBER
 
