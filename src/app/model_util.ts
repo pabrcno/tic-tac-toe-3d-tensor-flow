@@ -10,7 +10,6 @@ const aIPlay = async (
 
   // Three board states
   const boardTensor = tf.tensor<tf.Rank.R1>(board.flat());
-  console.log("paststate", board);
   // Stack states into a shape [3, 9]
   const matches = tf.stack<tf.Tensor<tf.Rank.R1>>([boardTensor]);
   const result = model.predict(matches) as tf.Tensor<tf.Rank.R1>;
