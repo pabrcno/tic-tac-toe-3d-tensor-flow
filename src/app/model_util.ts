@@ -31,6 +31,11 @@ const aIPlay = async (
       }
     });
   });
+  boardTensor.dispose();
+  matches.dispose();
+  model.dispose();
+  result.dispose();
+
   return board.map((element, i) =>
     element.map((e, j) =>
       i === index[0] && j === index[1] && e !== 1 ? -1 : e
